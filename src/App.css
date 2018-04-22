@@ -16,7 +16,6 @@
   background: white;
   margin-left: 20%;
   margin-right: 20%;
-  height: 8em;
 }
 
 .url-input {
@@ -31,6 +30,30 @@
 
 .short-url {
   color: rgb(243,98,35);
+  margin: .3em;
+}
+
+.urls-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2em;
+  background: white;
+  margin: 5em 5% 2em 5%;
+}
+
+.urls-list {
+  text-align: left;
+}
+
+.frequency {
+  border: 1px solid black;
+  background: rgb(235, 237, 239);
+  margin: .3em;
+  padding: 0 .2em 0 .2em;
+}
+
+.full-url {
+  margin: .3em 0 1em 0;
 }
 
 .footer {

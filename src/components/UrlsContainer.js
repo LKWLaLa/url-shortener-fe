@@ -17,13 +17,16 @@ class UrlsContainer extends Component {
   }
 
   mapUrls = () => {
-    this.state.urls.map((url) => <Url data={url} />)
+    return this.state.urls.map((url) => <li><Url data={url} /></li>)
   }
 
   render() {
     return (
-      <div>
+      <div className="urls-container">
+        <h3>The 100 most frequently accessed short URLs: </h3>
+        <ol className="urls-list">
         {this.mapUrls()}
+        </ol>
         <Footer />
       </div>
     );
