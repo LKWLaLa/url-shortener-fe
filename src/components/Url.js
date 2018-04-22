@@ -4,7 +4,7 @@ const Url = (props) => {
   let {short_url, full_url, frequency} = props.data
   return(
     <div className="url-item">
-      <span className="frequency">{frequency} hits</span>
+      <span className="frequency">{frequency} {frequency < 2 ? "hit" : "hits"}</span>
       <span className="short-url">{short_url}</span>
       <div className="full-url">
         Full URL: <a href={full_url}>{full_url}</a>
