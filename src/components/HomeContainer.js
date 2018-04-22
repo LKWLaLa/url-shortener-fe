@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Input from './Input'
 import Result from './Result'
+import Footer from './Footer'
 
 class HomeContainer extends Component {
 
@@ -38,6 +39,7 @@ class HomeContainer extends Component {
       <div>
         <Input postUrl={this.postUrl}/>
         {this.results()}
+        <Footer />
       </div>
     );
   }

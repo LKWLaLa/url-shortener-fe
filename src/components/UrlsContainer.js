@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Url from './Url'
+import Footer from './Footer'
 
 class UrlsContainer extends Component {
 
@@ -23,6 +24,7 @@ class UrlsContainer extends Component {
     return (
       <div>
         {this.mapUrls()}
+        <Footer />
       </div>
     );
   }
