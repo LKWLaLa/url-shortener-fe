@@ -1,10 +1,33 @@
 import React, { Component } from 'react'
 
 class Input extends Component {
+
+  constructor(){
+    super();
+
+    this.state = {
+      value:''
+    }
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state.value)
+    this.setState({value: ''})
+  }
+
+  handleChange = (e) => {
+    this.setState({value: e.target.value})
+  }
+
   render() {
     return (
       <div>
-        <input type="text" placeholder="Paste your url here"/>
+        <form onSubmit={this.handleSubmit}>
+          <input className="url-input" value={this.state.value} 
+                 onChange={this.handleChange} 
+                 placeholder="Paste your url here." />
+        </form>
       </div>
     );
   }
