@@ -9,29 +9,28 @@ class HomeContainer extends Component {
 
     this.state = {
       shortUrl:'',
-      longUrl: ''
+      fullUrl: ''
     }
   }
 
-  postUrl = (longUrl) => {
+  postUrl = (fullUrl) => {
     fetch('http://shrink-me.herokuapp.com/urls', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({url: longUrl})
+      body: JSON.stringify({url: fullUrl})
     }).then(res => res.json())
       .then(res => {
-        this.setState({shortUrl: res, longUrl: longUrl})
+        this.setState({shortUrl: res, fullUrl: fullUrl})
       })
   }
 
   render() {
     return (
       <div>
-        "Home Container"
         <Input postUrl={this.postUrl}/>
-        <Result />
+        <Result fullUrl={this.state.fullUrl} shortUrl={this.state.shortUrl}/>
       </div>
     );
   }
