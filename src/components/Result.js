@@ -5,7 +5,7 @@ const Result = (props) => {
     <div className="result-box">
       <p className="full-url">Original: {props.fullUrl}</p>
       <p className="short-url">
-        {props.shortUrl ? `http://shrink-me.herokuapp.com/${props.shortUrl}` : null }
+        {props.shortUrl ? `https://shrink-me.herokuapp.com/${props.shortUrl}` : null }
       </p>
     </div>
   )
