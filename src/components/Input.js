@@ -12,7 +12,7 @@ class Input extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.value)
+    this.props.postUrl(this.state.value)
     this.setState({value: ''})
   }
 
