@@ -26,7 +26,7 @@ class Input extends Component {
         <form onSubmit={this.handleSubmit}>
           <input className="url-input" value={this.state.value} 
                  onChange={this.handleChange} 
-                 placeholder="Paste your url here." />
+                 placeholder="Paste your URL here" />
         </form>
       </div>
     );

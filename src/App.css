@@ -6,6 +6,7 @@
   height: 40px;
   padding: 20px;
   color: white;
+  margin-bottom: 2em;
 }
 
 .result-box {
@@ -26,6 +27,10 @@
   height: 3em;
   text-align: center;
   font-size: 1em;
+}
+
+.short-url {
+  color: rgb(243,98,35);
 }
 
 
