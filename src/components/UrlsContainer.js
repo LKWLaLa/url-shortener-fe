@@ -27,7 +27,7 @@ class UrlsContainer extends Component {
         <ol className="urls-list">
         {this.mapUrls()}
         </ol>
-        <Footer />
+        <Footer path={this.props.history.location.pathname}/>
       </div>
     );
   }

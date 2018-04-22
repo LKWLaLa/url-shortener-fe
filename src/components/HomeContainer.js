@@ -39,7 +39,7 @@ class HomeContainer extends Component {
       <div>
         <Input postUrl={this.postUrl}/>
         {this.results()}
-        <Footer />
+        <Footer path={this.props.history.location.pathname}/>
       </div>
     );
   }
