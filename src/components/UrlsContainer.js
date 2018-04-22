@@ -9,7 +9,7 @@ class UrlsContainer extends Component {
     this.state = { urls: []}
   }
 
-  ComponentDidMount(){
+  componentDidMount(){
     fetch('https://shrink-me.herokuapp.com/top-100').then(res => res.json())
     .then(res => {
       this.setState({urls: res})

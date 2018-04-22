@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import '../App.css'
+import { Switch, Route } from 'react-router-dom'
 import HomeContainer from './HomeContainer'
+import UrlsContainer from './UrlsContainer'
 
 class App extends Component {
   render() {
@@ -10,7 +12,10 @@ class App extends Component {
           <h1>Shrink Me</h1>
           <p>Your friendly neighborhood URL shortener</p>
         </header>
-        <HomeContainer />
+        <Switch>
+          <Route exact path= '/' render={(props)=><HomeContainer {...props} /> } />          
+          <Route exact path= '/top-100' render={(props)=><UrlsContainer {...props} />} />
+        </Switch>
       </div>
     );
   }
