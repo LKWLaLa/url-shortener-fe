@@ -14,7 +14,7 @@ class HomeContainer extends Component {
   }
 
   postUrl = (fullUrl) => {
-    fetch('http://shrink-me.herokuapp.com/urls', {
+    fetch('https://shrink-me.herokuapp.com/urls', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
