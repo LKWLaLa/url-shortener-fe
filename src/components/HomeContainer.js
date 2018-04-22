@@ -26,11 +26,18 @@ class HomeContainer extends Component {
       })
   }
 
+  results = () => {
+    if(this.state.fullUrl && this.state.shortUrl){  
+      return <Result fullUrl={this.state.fullUrl} shortUrl={this.state.shortUrl}/>
+    }
+    return null
+  }
+
   render() {
     return (
       <div>
         <Input postUrl={this.postUrl}/>
-        <Result fullUrl={this.state.fullUrl} shortUrl={this.state.shortUrl}/>
+        {this.results()}
       </div>
     );
   }
