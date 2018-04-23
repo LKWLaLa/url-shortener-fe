@@ -7,7 +7,7 @@ A URL shortener client-side application, built with React. The corresponding bac
 
 ### Dependencies:
 
-- This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app), and requires Node >= 6 to run.
+- This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app), and requires Node >= 6 to run, as well as either [npm](https://www.npmjs.com/get-npm), or [yarn](https://yarnpkg.com/en/docs/install#mac-stable) for package management.
 
 
 ### Installation Guide:
