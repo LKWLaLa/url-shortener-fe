@@ -28,6 +28,10 @@
   font-size: 1em;
 }
 
+.error {
+  color: red;
+}
+
 .short-url {
   color: rgb(243,98,35);
   margin: .3em;

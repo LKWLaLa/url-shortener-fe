@@ -6,18 +6,35 @@ class Input extends Component {
     super();
 
     this.state = {
-      value:''
+      value:'',
+      valid: true
     }
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.postUrl(this.state.value)
-    this.setState({value: ''})
+    if (this.isValidURL(this.state.value)){
+      this.props.postUrl(this.state.value)
+      this.setState({value: '', valid: true})
+    }
+    else {
+      this.setState({valid: false})
+    }    
+  }
+
+  errorMessage = () => {
+    if (this.state.valid || this.state.value === ''){
+      return null
+    } 
+    return <div className="error">Please enter a valid URL.</div>
   }
 
   handleChange = (e) => {
     this.setState({value: e.target.value})
+  }
+
+  isValidURL = (input) => {
+    return /^(ftp|http|https):\/\/[^ "]+$/.test(input)
   }
 
   render() {
@@ -26,8 +43,9 @@ class Input extends Component {
         <form onSubmit={this.handleSubmit}>
           <input className="url-input" value={this.state.value} 
                  onChange={this.handleChange} 
-                 placeholder="Paste your URL here" />
+                 placeholder="Paste your URL here - (must begin with http or https)" />
         </form>
+        {this.errorMessage()}
       </div>
     );
   }
