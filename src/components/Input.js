@@ -23,10 +23,10 @@ class Input extends Component {
   }
 
   errorMessage = () => {
-    if (this.state.valid || this.state.value === ''){
+    if (this.state.valid){
       return null
     } 
-    return <div className="error">Please enter a valid URL.</div>
+    return <div className="error">Please enter a valid URL. - Must begin with http or https.</div>
   }
 
   handleChange = (e) => {
